@@ -95,10 +95,10 @@ const countRejectedPromises = async (promises) => {
       return promise
         .then(() => {
           // If the promise is resolved, do nothing
+          rejectedCount++;
         })
         .catch(() => {
           // If the promise is rejected, increment the rejected count
-          rejectedCount++;
         });
     })
   );
